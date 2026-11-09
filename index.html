@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101611" />
+  <title>The Last Light — A Storybook Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="The Last Light home" id="brandHome"><span class="brand-mark">✦</span><span>EMBER<span class="brand-muted">FALL</span></span></a>
+      <div class="topbar-center"><span class="campaign-dot"></span> A SOLO STORYBOOK ADVENTURE</div>
+      <button class="quiet-button" id="restartTop" type="button" title="Start a new adventure">↻ <span>New game</span></button>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar" aria-label="Adventure status">
+        <section class="profile-card" id="profileCard">
+          <div class="profile-top"><span class="eyebrow">YOUR ADVENTURER</span><span class="level-pill" id="levelPill">LV. 01</span></div>
+          <div class="avatar-wrap"><div class="avatar" id="avatar">?</div><span class="avatar-spark">✦</span></div>
+          <h2 id="heroName">Unchosen</h2>
+          <p class="hero-role" id="heroRole">Choose your path to begin</p>
+          <div class="stat-block">
+            <div class="stat-label"><span><i class="stat-icon heart">♥</i> VITALITY</span><span id="hpText">— / —</span></div>
+            <div class="meter"><div class="meter-fill health-fill" id="hpBar"></div></div>
+          </div>
+          <div class="stat-block"><div class="stat-label"><span><i class="stat-icon coin">◈</i> RENOWN</span><span id="renownText">0</span></div><div class="meter"><div class="meter-fill renown-fill" id="renownBar"></div></div></div>
+          <div class="inventory"><div class="inventory-title">PACK <span id="itemCount">0 ITEMS</span></div><div id="inventoryItems" class="inventory-items"><span class="empty-pack">Your pack is waiting.</span></div></div>
+        </section>
+        <section class="journal-card">
+          <div class="journal-heading"><span class="eyebrow">FIELD NOTES</span><span class="live-dot"></span></div>
+          <div class="journal-list" id="journal"><div class="journal-empty">Your story will be written here.</div></div>
+          <div class="die-legend"><span class="die-mini">D20</span><span>Fate is never certain.</span></div>
+        </section>
+      </aside>
+
+      <section class="game-area" aria-live="polite">
+        <div class="scene-art scene-start" id="sceneArt" aria-hidden="true"><div class="art-moon"></div><div class="art-mountain mountain-back"></div><div class="art-mountain mountain-front"></div><div class="art-pines"></div><div class="art-path"></div><div class="art-glow"></div><span class="art-caption" id="artCaption">THE HUSHING WOOD</span></div>
+        <div class="scene-content" id="sceneContent"></div>
+      </section>
+    </main>
+    <footer class="footer"><span>EMBERFALL <span class="footer-sep">/</span> THE LAST LIGHT</span><span>A tale shaped by your choices <span class="footer-sep">·</span> Roll with it</span></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>
