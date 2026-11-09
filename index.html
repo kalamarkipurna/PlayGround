@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101813">
+  <title>Emberfall — A Dicebound Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Emberfall home"><span class="brand-mark">✳</span><span>EMBERFALL</span><span class="brand-sub">A DICEBOUND ADVENTURE</span></a>
+      <div class="top-meta"><span class="session-pill"><i></i> SOLO ADVENTURE</span><button class="icon-button" id="sound-toggle" aria-label="Toggle sound" title="Sound effects">◖))</button><button class="icon-button" id="restart-top" aria-label="Start a new adventure" title="New adventure">↻</button></div>
+    </header>
+    <div id="game-root"></div>
+    <footer class="site-footer"><span>YOUR STORY. YOUR ROLL.</span><span>✦ &nbsp; A LITTLE LUCK NEVER HURTS &nbsp; ✦</span></footer>
+  </main>
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>
